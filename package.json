@@ -4,7 +4,7 @@
   "description": "3. Semester's Programmerings Projekt med Team Smoker: Claus, Jonas, Mikael &amp; Thomas",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
