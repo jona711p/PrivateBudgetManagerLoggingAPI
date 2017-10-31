@@ -1,0 +1,41 @@
+{
+  "name": "PrivateBudgetManagerLoggingAPI",
+  "version": "1.0.0",
+  "description": "3. Semester's Programmerings Projekt med Team Smoker: Claus, Jonas, Mikael &amp; Thomas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jona711p/PrivateBudgetManagerLoggingAPI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jona711p/PrivateBudgetManagerLoggingAPI/issues"
+  },
+  "homepage": "https://github.com/jona711p/PrivateBudgetManagerLoggingAPI#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "compression": "^1.7.1",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "helmet": "^3.9.0",
+    "mongoose": "^4.12.5",
+    "morgan": "^1.9.0"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.16.7",
+    "@types/compression": "0.0.34",
+    "@types/cookie-parser": "^1.4.1",
+    "@types/cors": "^2.8.1",
+    "@types/debug": "0.0.30",
+    "@types/express": "^4.0.39",
+    "@types/helmet": "0.0.37",
+    "@types/mongoose": "^4.7.24",
+    "@types/morgan": "^1.7.35"
+  }
+}
