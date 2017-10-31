@@ -21,7 +21,7 @@ var Server = /** @class */ (function () {
     Server.prototype.config = function () {
         // Init MongoDB
         var MONGO_URI = 'mongodb://localhost/privatebudgetmanagerloggingapi';
-        mongoose.connect(process.env.MONGODB_URI || MONGO_URI);
+        mongoose.connect(process.env.MONGOLAB_URI || MONGO_URI);
         // Express Middleware
         this.app.use(bodyParser.urlencoded({ extended: true }));
         this.app.use(bodyParser.json());
