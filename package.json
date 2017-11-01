@@ -1,5 +1,5 @@
 {
-  "name": "PrivateBudgetManagerLoggingAPI",
+  "name": "privatebudgetmanagerloggingapi",
   "version": "1.0.0",
   "description": "3. Semester's Programmerings Projekt med Team Smoker: Claus, Jonas, Mikael &amp; Thomas",
   "main": "index.js",
@@ -36,6 +36,7 @@
     "@types/express": "^4.0.39",
     "@types/helmet": "0.0.37",
     "@types/mongoose": "^4.7.24",
-    "@types/morgan": "^1.7.35"
+    "@types/morgan": "^1.7.35",
+    "jsdoc": "^3.5.5"
   }
 }
