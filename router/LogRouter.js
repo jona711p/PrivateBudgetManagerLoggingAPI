@@ -8,6 +8,7 @@ var LogRouter = /** @class */ (function () {
         this.router = express_1.Router();
         this.routes();
     }
+    ;
     // Get all of the Logs in the Database
     LogRouter.prototype.all = function (req, res) {
         Log_1.default.find()
@@ -18,6 +19,7 @@ var LogRouter = /** @class */ (function () {
             res.json({ error: error });
         });
     };
+    ;
     // Get a single Log by 'Id'
     LogRouter.prototype.one = function (req, res) {
         var id = req.params.Id;
@@ -29,6 +31,7 @@ var LogRouter = /** @class */ (function () {
             res.status(500).json({ error: error });
         });
     };
+    ;
     // Create a new Log
     LogRouter.prototype.create = function (req, res) {
         var user = req.body.user;
@@ -48,6 +51,7 @@ var LogRouter = /** @class */ (function () {
             res.status(500).json({ error: error });
         });
     };
+    ;
     // Update log by 'Id'
     LogRouter.prototype.update = function (req, res) {
         var id = req.body.id;
@@ -59,6 +63,7 @@ var LogRouter = /** @class */ (function () {
             res.status(500).json({ error: error });
         });
     };
+    ;
     // delete log by 'Id'
     LogRouter.prototype.delete = function (req, res) {
         var id = req.body.id;
@@ -70,6 +75,7 @@ var LogRouter = /** @class */ (function () {
             res.status(500).json({ error: error });
         });
     };
+    ;
     // Get all of the Logs in the Database for one Day
     LogRouter.prototype.day = function (req, res) {
         Log_1.default.find({ timestamp: { $lte: new Date(), $gte: new Date(new Date().setDate(new Date().getDate() - 1)) } })
@@ -80,6 +86,7 @@ var LogRouter = /** @class */ (function () {
             res.json({ error: error });
         });
     };
+    ;
     // Get all of the Logs in the Database for one Week
     LogRouter.prototype.week = function (req, res) {
         Log_1.default.find({ timestamp: { $lte: new Date(), $gte: new Date(new Date().setDate(new Date().getDate() - 7)) } })
@@ -90,6 +97,7 @@ var LogRouter = /** @class */ (function () {
             res.json({ error: error });
         });
     };
+    ;
     // Get all of the Logs in the Database for one Month
     LogRouter.prototype.month = function (req, res) {
         Log_1.default.find({ timestamp: { $lte: new Date(), $gte: new Date(new Date().setDate(new Date().getDate() - 31)) } })
@@ -100,6 +108,7 @@ var LogRouter = /** @class */ (function () {
             res.json({ error: error });
         });
     };
+    ;
     // Routes
     LogRouter.prototype.routes = function () {
         this.router.get('/', this.all);
@@ -111,9 +120,11 @@ var LogRouter = /** @class */ (function () {
         this.router.get('/week', this.week);
         this.router.get('/month', this.month);
     };
+    ;
     return LogRouter;
 }());
 exports.LogRouter = LogRouter;
+;
 var logRoutes = new LogRouter();
 logRoutes.routes();
 // Export

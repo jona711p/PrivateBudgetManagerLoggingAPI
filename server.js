@@ -10,6 +10,7 @@ var logger = require("morgan");
 var helmet = require("helmet");
 var mongoose = require("mongoose");
 // Import our Routers/Controllers
+var DevRouter_1 = require("./router/DevRouter");
 var LogRouter_1 = require("./router/LogRouter");
 var Server = /** @class */ (function () {
     function Server() {
@@ -17,6 +18,7 @@ var Server = /** @class */ (function () {
         this.config();
         this.routes();
     }
+    ;
     // Application Config
     Server.prototype.config = function () {
         // Init MongoDB
@@ -38,18 +40,18 @@ var Server = /** @class */ (function () {
             res.header('Access-Control-Allow-Credentials', 'true');
             next();
         });
-        // Documentation
-        //    this.app.use('/', (req, res) => {
-        //      res.sendFile(__dirname + '/index.html')
-        //    });
     };
+    ;
     // Application Routes
     Server.prototype.routes = function () {
         var router = express.Router();
         this.app.use('/', router);
+        this.app.use('/dev', DevRouter_1.default);
         this.app.use('/logs', LogRouter_1.default);
     };
+    ;
     return Server;
 }());
+;
 // Export
 exports.default = new Server().app;

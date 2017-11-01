@@ -10,7 +10,7 @@ export class LogRouter {
   constructor() {
     this.router = Router();
     this.routes();
-  }
+  };
 
 
   // Get all of the Logs in the Database
@@ -22,7 +22,7 @@ export class LogRouter {
       .catch((error) => {
         res.json({ error });
       })
-  }
+  };
 
 
   // Get a single Log by 'Id'
@@ -36,7 +36,7 @@ export class LogRouter {
       .catch((error) => {
         res.status(500).json({ error });
       })
-  }
+  };
 
 
   // Create a new Log
@@ -60,7 +60,7 @@ export class LogRouter {
       .catch((error) => {
         res.status(500).json({ error });
       })
-  }
+  };
 
 
   // Update log by 'Id'
@@ -74,7 +74,7 @@ export class LogRouter {
       .catch((error) => {
         res.status(500).json({ error });
       })
-  }
+  };
 
 
   // delete log by 'Id'
@@ -88,7 +88,7 @@ export class LogRouter {
       .catch((error) => {
         res.status(500).json({ error });
       })
-  }
+  };
 
 
   // Get all of the Logs in the Database for one Day
@@ -100,7 +100,7 @@ export class LogRouter {
       .catch((error) => {
         res.json({ error });
       })
-  }
+  };
 
 
   // Get all of the Logs in the Database for one Week
@@ -112,7 +112,7 @@ export class LogRouter {
       .catch((error) => {
         res.json({ error });
       })
-  }
+  };
 
 
   // Get all of the Logs in the Database for one Month
@@ -124,7 +124,7 @@ export class LogRouter {
       .catch((error) => {
         res.json({ error });
       })
-  }
+  };
 
 
   // Routes
@@ -137,8 +137,8 @@ export class LogRouter {
     this.router.get('/day', this.day);
     this.router.get('/week', this.week);
     this.router.get('/month', this.month);
-  }
-}
+  };
+};
 
 
 const logRoutes = new LogRouter();
