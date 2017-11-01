@@ -14,7 +14,7 @@ export class DevRouter {
 
     // Documentation
     public dev(req: Request, res: Response): void {
-        res.sendFile(__dirname + '/index.html')
+        res.sendFile(__dirname + './index.html')
     };
 
 
