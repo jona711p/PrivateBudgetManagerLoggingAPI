@@ -4,7 +4,7 @@
   "description": "3. Semester's Programmerings Projekt med Team Smoker: Claus, Jonas, Mikael &amp; Thomas",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node ./build/index.js"
   },
   "repository": {
     "type": "git",
