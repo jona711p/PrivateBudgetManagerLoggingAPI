@@ -39,9 +39,9 @@ var Server = /** @class */ (function () {
             next();
         });
         // Documentation
-        this.app.use('/', function (req, res) {
-            res.sendFile(__dirname + '/index.html');
-        });
+        //    this.app.use('/', (req, res) => {
+        //      res.sendFile(__dirname + '/index.html')
+        //    });
     };
     // Application Routes
     Server.prototype.routes = function () {

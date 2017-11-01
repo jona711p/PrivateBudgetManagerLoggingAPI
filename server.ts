@@ -55,9 +55,9 @@ class Server {
 
 
     // Documentation
-    this.app.use('/', (req, res) => {
-      res.sendFile(__dirname + '/index.html')
-    });
+//    this.app.use('/', (req, res) => {
+//      res.sendFile(__dirname + '/index.html')
+//    });
   }
 
 
