@@ -31,7 +31,7 @@ class Server {
 
     // Init MongoDB
     const MONGO_URI: string = 'mongodb://localhost/privatebudgetmanagerloggingapi';
-    mongoose.connect(process.env.MONGOLAB_URI || MONGO_URI);
+    mongoose.connect(process.env.MONGODB_URI || MONGO_URI);
 
 
     // Express Middleware
