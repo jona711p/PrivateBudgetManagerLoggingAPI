@@ -43,7 +43,7 @@ var Server = /** @class */ (function () {
     Server.prototype.routes = function () {
         var router = express.Router();
         this.app.use('/', function (req, res) {
-            res.sendFile(__dirname + './index.html');
+            res.sendFile(__dirname + '/index.html');
         });
         this.app.use('/logs', LogRouter_1.default);
     };
