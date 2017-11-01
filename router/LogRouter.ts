@@ -3,6 +3,7 @@ import { Router, Request, Response } from 'express';
 import Log from '../models/Log';
 
 
+// LogRouter
 export class LogRouter {
 
   router: Router;
@@ -77,7 +78,7 @@ export class LogRouter {
   };
 
 
-  // delete log by 'Id'
+  // Delete log by 'Id'
   public delete(req: Request, res: Response): void {
     const id: string = req.body.id;
 

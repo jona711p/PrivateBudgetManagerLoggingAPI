@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 // Imports
 var express_1 = require("express");
 var Log_1 = require("../models/Log");
+// LogRouter
 var LogRouter = /** @class */ (function () {
     function LogRouter() {
         this.router = express_1.Router();
@@ -64,7 +65,7 @@ var LogRouter = /** @class */ (function () {
         });
     };
     ;
-    // delete log by 'Id'
+    // Delete log by 'Id'
     LogRouter.prototype.delete = function (req, res) {
         var id = req.body.id;
         Log_1.default.findOneAndRemove({ id: id })
