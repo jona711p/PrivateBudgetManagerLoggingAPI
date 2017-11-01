@@ -10,7 +10,6 @@ import * as mongoose from 'mongoose';
 
 
 // Import our Routers/Controllers
-import DevRouter from './router/DevRouter';
 import LogRouter from './router/LogRouter';
 
 
@@ -53,6 +52,12 @@ class Server {
       res.header('Access-Control-Allow-Credentials', 'true');
       next();
     });
+
+
+    // Documentation
+    this.app.get('/dev', (req, res) => {
+      res.sendFile(__dirname + '/index.html');
+    });
   };
 
 
@@ -61,7 +66,6 @@ class Server {
     const router: express.Router = express.Router();
 
     this.app.use('/', router);
-    this.app.use('/dev', DevRouter);
     this.app.use('/logs', LogRouter);
   };
 };
