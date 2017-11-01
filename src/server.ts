@@ -60,7 +60,7 @@ class Server {
     const router: express.Router = express.Router();
 
     this.app.use('/', (req, res) => {
-      res.sendFile(__dirname + '/index.html')
+      res.sendFile(__dirname + '../index.html')
     });
 
     this.app.use('/logs', LogRouter);
