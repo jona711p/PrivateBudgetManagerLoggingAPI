@@ -52,6 +52,12 @@ class Server {
       res.header('Access-Control-Allow-Credentials', 'true');
       next();
     });
+
+
+    // Documentation
+    this.app.use('/', (req, res) => {
+      res.sendFile(__dirname + '/index.html')
+    });
   }
 
 
@@ -59,10 +65,7 @@ class Server {
   public routes(): void {
     const router: express.Router = express.Router();
 
-    this.app.use('/', (req, res) => {
-      res.sendFile(__dirname + '/index.html')
-    });
-
+    this.app.use('/', router);
     this.app.use('/logs', LogRouter);
   }
 }

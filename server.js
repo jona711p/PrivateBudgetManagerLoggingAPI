@@ -38,13 +38,15 @@ var Server = /** @class */ (function () {
             res.header('Access-Control-Allow-Credentials', 'true');
             next();
         });
+        // Documentation
+        this.app.use('/', function (req, res) {
+            res.sendFile(__dirname + '/index.html');
+        });
     };
     // Application Routes
     Server.prototype.routes = function () {
         var router = express.Router();
-        this.app.use('/', function (req, res) {
-            res.sendFile(__dirname + '/index.html');
-        });
+        this.app.use('/', router);
         this.app.use('/logs', LogRouter_1.default);
     };
     return Server;
