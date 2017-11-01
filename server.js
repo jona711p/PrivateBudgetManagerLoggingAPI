@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var bodyParser = require("body-parser");
 var compression = require("compression");
 var cookieParser = require("cookie-parser");
-var cors = require("cors");
+//import * as cors from 'cors';
 var express = require("express");
 var logger = require("morgan");
 var helmet = require("helmet");
@@ -27,17 +27,17 @@ var Server = /** @class */ (function () {
         this.app.use(bodyParser.json());
         this.app.use(compression());
         this.app.use(cookieParser());
-        this.app.use(cors());
+        //this.app.use(cors());
         this.app.use(logger('dev'));
         this.app.use(helmet());
         // Cors
-        this.app.use(function (req, res, next) {
-            res.header('Access-Control-Allow-Origin', '*');
-            res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-            res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization, Access-Control-Allow-Credentials');
-            res.header('Access-Control-Allow-Credentials', 'true');
-            next();
-        });
+        //    this.app.use((req, res, next) => {
+        //      res.header('Access-Control-Allow-Origin', '*');
+        //      res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+        //      res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization, Access-Control-Allow-Credentials');
+        //      res.header('Access-Control-Allow-Credentials', 'true');
+        //      next();
+        //    });
         this.app.get('/', function (req, res) {
             res.sendFile(__dirname + '/shared/index.html');
         });

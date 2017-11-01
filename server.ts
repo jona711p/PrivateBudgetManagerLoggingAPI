@@ -2,7 +2,7 @@
 import * as bodyParser from 'body-parser';
 import * as compression from 'compression';
 import * as cookieParser from 'cookie-parser';
-import * as cors from 'cors';
+//import * as cors from 'cors';
 import * as express from 'express';
 import * as logger from 'morgan';
 import * as helmet from 'helmet';
@@ -39,19 +39,19 @@ class Server {
     this.app.use(bodyParser.json());
     this.app.use(compression());
     this.app.use(cookieParser());
-    this.app.use(cors());
+    //this.app.use(cors());
     this.app.use(logger('dev'));
     this.app.use(helmet());
 
 
     // Cors
-    this.app.use((req, res, next) => {
-      res.header('Access-Control-Allow-Origin', '*');
-      res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-      res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization, Access-Control-Allow-Credentials');
-      res.header('Access-Control-Allow-Credentials', 'true');
-      next();
-    });
+//    this.app.use((req, res, next) => {
+//      res.header('Access-Control-Allow-Origin', '*');
+//      res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+//      res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization, Access-Control-Allow-Credentials');
+//      res.header('Access-Control-Allow-Credentials', 'true');
+//      next();
+//    });
 
 
     this.app.get('/', (req, res) => {
