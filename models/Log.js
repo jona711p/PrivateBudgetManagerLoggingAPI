@@ -13,6 +13,11 @@ var LogSchema = new mongoose_1.Schema({
         default: '',
         required: true
     },
+    statusCode: {
+        type: String,
+        default: '',
+        required: true
+    },
     logEntry: {
         type: String,
         default: '',

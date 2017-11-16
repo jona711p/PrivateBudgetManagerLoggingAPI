@@ -36,12 +36,14 @@ var LogRouter = /** @class */ (function () {
     // Create a new Log
     LogRouter.prototype.create = function (req, res) {
         var user = req.body.user;
+        var statusCode = req.body.statusCode;
         var logEntry = req.body.logEntry;
         if (!user || !logEntry) {
             res.status(422).json({ message: 'All Fields Required.' });
         }
         var log = new Log_1.default({
             user: user,
+            statusCode: statusCode,
             logEntry: logEntry
         });
         log.save()

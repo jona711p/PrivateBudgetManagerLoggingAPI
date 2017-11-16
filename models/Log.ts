@@ -13,6 +13,11 @@ let LogSchema: Schema = new Schema({
     default: '',
     required: true
   },
+  statusCode: {
+    type: String,
+    default: '',
+    required: true
+  },
   logEntry: {
     type: String,
     default: '',

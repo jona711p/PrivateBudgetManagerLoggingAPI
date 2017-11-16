@@ -43,6 +43,7 @@ export class LogRouter {
   // Create a new Log
   public create(req: Request, res: Response): void {
     const user: string = req.body.user;
+    const statusCode: string = req.body.statusCode;
     const logEntry: string = req.body.logEntry;
 
     if (!user || !logEntry) {
@@ -51,6 +52,7 @@ export class LogRouter {
 
     const log = new Log({
       user,
+      statusCode,
       logEntry
     });
 
