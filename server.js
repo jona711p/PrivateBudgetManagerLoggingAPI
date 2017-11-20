@@ -39,10 +39,6 @@ var Server = /** @class */ (function () {
             res.header('Access-Control-Allow-Credentials', 'true');
             next();
         });
-        // Documentation
-        this.app.get('/dev', function (req, res) {
-            res.sendFile(__dirname + '/index.html');
-        });
     };
     ;
     // Application Routes
